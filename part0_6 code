@@ -1,0 +1,24 @@
+title Untitled
+
+note over browser:
+user opens single page notes app in browser
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+
+note over browser:
+browser sends only one request to the server
+end note
+
+note right of server:
+ The POST request to the addresss new_note contains the new note as a JSON_data
+end note
+note left of browser:
+Browserstays on the same page and it does not send any further requests.
+end note 
+note over server:
+fetch the form-element from the page, and to register an event handler
+end note
+server-->browser: HTML-code
+note over browser:
+event handler creates a new note,adds it to the notes list.
+end note
